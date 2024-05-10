@@ -1,0 +1,22 @@
+---
+- name: Check if homebrew installed
+  ansible.builtin.stat:
+    path: /home/linuxbrew/.linuxbrew/bin/brew
+  register: homebrew_installed
+
+- name: Install homebrew
+  block:
+    - name: Download homebrew installation script
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+        dest: /tmp/install_homebrew.sh
+        mode: u=rwx,go=rx
+    - name: Execute Homebrew installation script
+      command: /bin/bash /tmp/install_homebrew.sh
+  when: not homebrew_installed.stat.exists
+
+- name: Install homebrew packages
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ homebrew_installed_packages }}"

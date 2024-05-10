@@ -1,0 +1,38 @@
+---
+# Packages to install via apt
+apt_installed_packages:
+  - zsh
+  - gnome-tweaks
+  - wezterm
+  - build-essential
+  - procps
+  - curl
+  - file
+  - git
+  - fd-find
+
+# Packages to install via homebrew
+homebrew_installed_packages:
+  - gcc
+  - fzy
+  - zplug
+  - starship
+  - eza
+  - bat
+  - zoxide
+  - ripgrep
+  - tldr
+  - httpie
+  - jq
+  - gitui
+
+# Git config
+git_config:
+  - name: user.name
+    value: Ben Poppy
+  - name: user.email
+    value: me@benpoppy.dev
+  - name: init.defaultBranch
+    value: main
+  - name: pull.rebase
+    value: true
