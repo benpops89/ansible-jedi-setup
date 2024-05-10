@@ -1,0 +1,13 @@
+---
+- name: Download Obsidian AppImage from GitHub
+  ansible.builtin.get_url:
+    url: https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian-1.5.12.AppImage
+    dest: /home/benpoppy/obsidian/Obsidian.AppImage
+    mode: "u+x"
+
+- name: Create symlink to applications for Obsidian
+  become: true
+  ansible.builtin.file:
+    src: /home/benpoppy/obsidian/obsidian.desktop
+    dest: /usr/share/applications/obsidian.desktop
+    state: link
