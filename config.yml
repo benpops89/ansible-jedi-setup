@@ -25,6 +25,7 @@ homebrew_installed_packages:
   - httpie
   - jq
   - gitui
+  - neovim
 
 # Git config
 git_config:
