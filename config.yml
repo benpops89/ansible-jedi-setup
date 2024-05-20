@@ -14,7 +14,7 @@ apt_installed_packages:
 # Packages to install via homebrew
 homebrew_installed_packages:
   - gcc
-  - fzy
+  - fzf
   - zplug
   - starship
   - eza
