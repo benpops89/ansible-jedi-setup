@@ -35,5 +35,5 @@ ansible-playbook main.yml --ask-become-pass
 This command will execute the setup.yml playbook, prompting you for your sudo password to install the necessary packages and applications.
 
 ## TODO
-- [] Clone and setup dotfiles
-- [] Make this work for MacOS
+- [ ] Clone and setup dotfiles
+- [ ] Make this work for MacOS
