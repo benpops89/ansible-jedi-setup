@@ -14,8 +14,8 @@ Before running the playbooks, ensure you have the following installed on your sy
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone git@github.com:benpops89/ansible-jedi-setup.git
+   cd ansible-jedi-setup
    ```
 
 2. Install required Ansible roles:
