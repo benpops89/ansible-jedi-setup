@@ -38,3 +38,5 @@ git_config:
     value: main
   - name: pull.rebase
     value: true
+  - name: core.editor
+    value: nvim
