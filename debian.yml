@@ -9,10 +9,4 @@
     - import_tasks: tasks/apt-packages.yml
     - import_tasks: tasks/homebrew.yml
     - import_tasks: tasks/obsidian.yml
-
-    - name: Setup git global credentials
-      community.general.git_config:
-        name: "{{ item.name }}"
-        value: "{{ item.value }}"
-        scope: global
-      loop: "{{ git_config }}"
+    - import_tasks: tasks/git.yml

@@ -1,0 +1,7 @@
+---
+- name: Setup git global credentials
+  community.general.git_config:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    scope: global
+  loop: "{{ git_config | combine({'user.email': 'bpoppy@intellum.com'}) }}"

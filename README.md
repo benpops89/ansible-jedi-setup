@@ -37,3 +37,4 @@ This command will execute the setup.yml playbook, prompting you for your sudo pa
 ## TODO
 - [ ] Clone and setup dotfiles
 - [ ] Make this work for MacOS
+- [ ] Setup dock for mac using Ansible
