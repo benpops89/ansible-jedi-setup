@@ -5,6 +5,15 @@
   vars_files:
     - config.yml
 
+  pre_tasks:
+    - name: Add paths to PATH
+      ansible.builtin.lineinfile:
+        path: /etc/paths
+        line: { { item } }
+      loop:
+        - /Users/benpoppy/Library/Python/3.9/bin
+        - /opt/homebrew/bin
+
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
