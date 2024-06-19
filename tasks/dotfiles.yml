@@ -1,16 +1,27 @@
 ---
+- name: Store value for $HOME for later use
+  ansible.builtin.set_fact:
+    home: "{{ ansible_env['HOME'] }}"
+
 - name: Create folder where git repo for dotfiles will be tracked
   ansible.builtin.file:
-    src: $HOME/.dotfiles
+    src: "{{ home }}/.dotfiles"
     state: directory
 
 - name: Clone the bare repo for dotfiles
   ansible.builtin.git:
     repo: git@github.com:benpops89/dotfiles.git
-    dest: $HOME/.dotfiles
+    dest: "{{ home }}/.dotfiles"
     bare: true
 
 - name: Checkout the files
   ansible.builtin.command:
     cmd: dots checkout
-    creates: $HOME/.zshrc
+    creates: "{{ home }}/.zshrc"
+
+- name: Set showUntrackedFiles on repo
+  community.general.git_config:
+    name: status.showUntrackedFiles
+    repo: "{{ home }}/.dotfiles"
+    scope: local
+    value: no

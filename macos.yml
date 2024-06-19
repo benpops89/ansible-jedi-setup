@@ -9,7 +9,7 @@
     - name: Add paths to PATH
       ansible.builtin.lineinfile:
         path: /etc/paths
-        line: { { item } }
+        line: "{{ item }}"
       loop:
         - /Users/benpoppy/Library/Python/3.9/bin
         - /opt/homebrew/bin
@@ -20,4 +20,10 @@
     # - role: geerlingguy.mac.dock
 
   tasks:
+    - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/git.yml
+    - name: Override the global email value
+      community.general.git_config:
+        name: user.email
+        scope: global
+        value: bpoppy@intellum.com
