@@ -16,7 +16,7 @@
 
 - name: Checkout the files
   ansible.builtin.command:
-    cmd: dots checkout
+    cmd: "git checkout --git-dir={{ home }}/.dotfiles --work-tree={{ home }}"
     creates: "{{ home }}/.zshrc"
 
 - name: Set showUntrackedFiles on repo
