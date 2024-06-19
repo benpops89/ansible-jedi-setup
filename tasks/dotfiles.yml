@@ -5,7 +5,7 @@
 
 - name: Create folder where git repo for dotfiles will be tracked
   ansible.builtin.file:
-    src: "{{ home }}/.dotfiles"
+    path: "{{ home }}/.dotfiles"
     state: directory
 
 - name: Clone the bare repo for dotfiles
