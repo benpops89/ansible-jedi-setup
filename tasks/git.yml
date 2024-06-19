@@ -4,4 +4,4 @@
     name: "{{ item.name }}"
     value: "{{ item.value }}"
     scope: global
-  loop: "{{ git_config | combine({'user.email': 'bpoppy@intellum.com'}) }}"
+  loop: "{{ git_config }}"
