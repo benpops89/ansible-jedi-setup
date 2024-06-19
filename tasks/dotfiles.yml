@@ -1,0 +1,16 @@
+---
+- name: Create folder where git repo for dotfiles will be tracked
+  ansible.builtin.file:
+    src: $HOME/.dotfiles
+    state: directory
+
+- name: Clone the bare repo for dotfiles
+  ansible.builtin.git:
+    repo: git@github.com:benpops89/dotfiles.git
+    dest: $HOME/.dotfiles
+    bare: true
+
+- name: Checkout the files
+  ansible.builtin.command:
+    cmd: dots checkout
+    creates: $HOME/.zshrc
