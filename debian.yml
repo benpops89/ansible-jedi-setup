@@ -11,3 +11,7 @@
     - import_tasks: tasks/obsidian.yml
     - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/git.yml
+    - name: Change user shell to zsh
+      ansible.builtin.user:
+        name: "{{ ansible_env['USER'] }}"
+        shell: /bin/zsh
