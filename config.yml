@@ -42,8 +42,6 @@ homebrew_cask_apps:
 git_config:
   - name: user.name
     value: Ben Poppy
-  - name: user.email
-    value: me@benpoppy.dev
   - name: init.defaultBranch
     value: main
   - name: pull.rebase
@@ -52,5 +50,5 @@ git_config:
     value: nvim
 
 git_personal:
-  - ansible-jedi-setup
+  - ws/ansible-jedi-setup
   - .dotfiles

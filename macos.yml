@@ -22,7 +22,7 @@
   tasks:
     - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/git.yml
-    - name: Override the global email value
+    - name: Set the global email value
       community.general.git_config:
         name: user.email
         scope: global
@@ -30,8 +30,7 @@
     - name: Set email for personal repos
       community.general.git_config:
         name: user.email
-        repo: "{{ home }}/ws/{{ item }}"
+        repo: "{{ home }}/{{ item }}"
         scope: local
         value: me@benpoppy.dev
-      loop:
-        - "{{ git_personal }}"
+      loop: "{{ git_personal }}"
