@@ -21,7 +21,7 @@
 
 - name: Set showUntrackedFiles on repo
   community.general.git_config:
-    name: status.showUntrackedFiles
+    name: status.showuntrackedfiles
     repo: "{{ home }}/.dotfiles"
     scope: local
-    value: no
+    value: "no"
