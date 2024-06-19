@@ -19,9 +19,10 @@
     cmd: "git --git-dir={{ home }}/.dotfiles --work-tree={{ home }} checkout"
     creates: "{{ home }}/.zshrc"
 
-- name: Set showUntrackedFiles on repo
+- name: Setup git config on dotfiles git repo
   community.general.git_config:
-    name: status.showuntrackedfiles
+    name: "{{ item.name }}"
     repo: "{{ home }}/.dotfiles"
     scope: local
-    value: "no"
+    value: "{{ item.value }}"
+  loop: {{ dots_config }}

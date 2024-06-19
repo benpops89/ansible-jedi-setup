@@ -49,6 +49,12 @@ git_config:
   - name: core.editor
     value: nvim
 
+dots_config:
+  - name: showUntrackedFiles
+    value: 'no'
+  - name: push.autoSetupRemote
+    value: true
+
 git_personal:
   - ws/ansible-jedi-setup
   - .dotfiles
