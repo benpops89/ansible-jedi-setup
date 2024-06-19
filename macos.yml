@@ -27,3 +27,11 @@
         name: user.email
         scope: global
         value: bpoppy@intellum.com
+    - name: Set email for personal repos
+      community.general.git_config:
+        name: user.email
+        repo: "{{ home }}/ws/{{ item }}"
+        scope: local
+        value: me@benpoppy.dev
+      loop:
+        - "{{ git_personal }}"

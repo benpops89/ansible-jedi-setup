@@ -50,3 +50,7 @@ git_config:
     value: true
   - name: core.editor
     value: nvim
+
+git_personal:
+  - ansible-jedi-setup
+  - .dotfiles
