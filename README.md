@@ -38,3 +38,5 @@ This command will execute the setup.yml playbook, prompting you for your sudo pa
 - [ ] Clone and setup dotfiles
 - [ ] Make this work for MacOS
 - [ ] Setup dock for mac using Ansible
+- [ ] Playbook to update all machines - run via cron?
+- [ ] Add [tools](https://github.com/onedr0p/cluster-template/blob/main/.taskfiles/Workstation/Brewfile) required for cluster-template

@@ -9,6 +9,7 @@ apt_installed_packages:
   - curl
   - file
   - git
+  - rpi-imager
 
 # Packages to install via homebrew
 homebrew_installed_packages:
@@ -27,6 +28,8 @@ homebrew_installed_packages:
   - gitui
   - neovim
   - go
+  - go-task
+  - direnv
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
