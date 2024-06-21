@@ -37,6 +37,7 @@ homebrew_cask_apps:
   - raycast
   - obsidian
   - wezterm
+  - todoist
 
 # Git config
 git_config:
