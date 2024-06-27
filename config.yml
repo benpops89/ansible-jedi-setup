@@ -38,6 +38,8 @@ homebrew_cask_apps:
   - obsidian
   - wezterm
   - todoist
+  - docker
+  - arc
 
 # Git config
 git_config:
