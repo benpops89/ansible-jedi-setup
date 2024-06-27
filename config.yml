@@ -51,7 +51,7 @@ git_config:
     value: nvim
 
 dots_config:
-  - name: showUntrackedFiles
+  - name: status.showUntrackedFiles
     value: 'no'
   - name: push.autoSetupRemote
     value: true

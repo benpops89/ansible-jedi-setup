@@ -25,4 +25,4 @@
     repo: "{{ home }}/.dotfiles"
     scope: local
     value: "{{ item.value }}"
-  loop: {{ dots_config }}
+  loop: "{{ dots_config }}"
