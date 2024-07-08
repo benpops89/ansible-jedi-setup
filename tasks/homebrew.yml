@@ -19,4 +19,5 @@
   community.general.homebrew:
     name: "{{ item }}"
     state: present
+    path: "/home/linuxbrew/.linuxbrew/bin"
   loop: "{{ homebrew_installed_packages }}"
