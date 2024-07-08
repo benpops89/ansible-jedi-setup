@@ -21,3 +21,10 @@
       ansible.builtin.user:
         name: "{{ ansible_env['USER'] }}"
         shell: /bin/zsh
+    - name: Set email for personal repos
+      community.general.git_config:
+        name: user.email
+        repo: "{{ home }}/{{ item }}"
+        scope: local
+        value: me@benpoppy.dev
+      loop: "{{ git_personal }}"
