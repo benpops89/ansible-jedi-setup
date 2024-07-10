@@ -30,6 +30,7 @@ homebrew_installed_packages:
   - go
   - go-task
   - direnv
+  - awscli
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
@@ -40,6 +41,7 @@ homebrew_cask_apps:
   - todoist
   - docker
   - arc
+  - google-cloud-sdk
 
 # Git config
 git_config:
