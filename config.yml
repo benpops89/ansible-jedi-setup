@@ -48,6 +48,8 @@ homebrew_cask_apps:
 git_config:
   - name: user.name
     value: Ben Poppy
+  - name: user.email
+    value: me@benpoppy.dev
   - name: init.defaultBranch
     value: main
   - name: pull.rebase
@@ -60,7 +62,3 @@ dots_config:
     value: 'no'
   - name: push.autoSetupRemote
     value: true
-
-git_personal:
-  - ws/ansible-jedi-setup
-  - .dotfiles
