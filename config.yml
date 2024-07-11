@@ -32,6 +32,8 @@ homebrew_installed_packages:
   - direnv
   - awscli
   - libyaml
+  - mise
+  - pipx
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
