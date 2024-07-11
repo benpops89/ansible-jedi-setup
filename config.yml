@@ -45,6 +45,7 @@ homebrew_cask_apps:
   - docker
   - arc
   - google-cloud-sdk
+  - zoom
 
 # Git config
 git_config:
