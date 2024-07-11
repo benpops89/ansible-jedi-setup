@@ -31,6 +31,7 @@ homebrew_installed_packages:
   - go-task
   - direnv
   - awscli
+  - libyaml
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
