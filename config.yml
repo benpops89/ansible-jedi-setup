@@ -34,6 +34,7 @@ homebrew_installed_packages:
   - libyaml
   - mise
   - pipx
+  - mongosh
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
@@ -46,6 +47,7 @@ homebrew_cask_apps:
   - arc
   - google-cloud-sdk
   - zoom
+  - dbeaver-community
 
 # Git config
 git_config:
