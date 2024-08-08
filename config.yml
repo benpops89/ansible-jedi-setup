@@ -36,6 +36,7 @@ homebrew_installed_packages:
   - pipx
   - mongosh
   - zellij
+  - terraform
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
