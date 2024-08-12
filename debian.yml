@@ -5,6 +5,10 @@
   vars_files:
     - config.yml
 
+  roles:
+    - role: geerlingguy.docker
+      become: true
+
   tasks:
     - import_tasks: tasks/apt-packages.yml
     - import_tasks: tasks/homebrew.yml
