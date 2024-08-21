@@ -38,6 +38,8 @@ homebrew_installed_packages:
   - zellij
   - terraform
   - act
+  - sops
+  - age
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
@@ -71,6 +73,6 @@ git_config:
 
 dots_config:
   - name: status.showUntrackedFiles
-    value: 'no'
+    value: "no"
   - name: push.autoSetupRemote
     value: true
