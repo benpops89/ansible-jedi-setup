@@ -35,8 +35,8 @@ ansible-playbook main.yml --ask-become-pass
 This command will execute the setup.yml playbook, prompting you for your sudo password to install the necessary packages and applications.
 
 ## TODO
-- [ ] Clone and setup dotfiles
-- [ ] Make this work for MacOS
+- [x] Clone and setup dotfiles
+- [x] Make this work for MacOS
 - [ ] Setup dock for mac using Ansible
 - [ ] Playbook to update all machines - run via cron?
-- [ ] Add [tools](https://github.com/onedr0p/cluster-template/blob/main/.taskfiles/Workstation/Brewfile) required for cluster-template
+- [ ] Setup age key for each machine ~/.age/key.txt
