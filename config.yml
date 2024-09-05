@@ -10,6 +10,7 @@ apt_installed_packages:
   - file
   - git
   - rpi-imager
+  - dnsutils
 
 # Packages to install via homebrew
 homebrew_installed_packages:
