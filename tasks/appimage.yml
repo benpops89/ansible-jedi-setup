@@ -1,0 +1,13 @@
+---
+- name: Download AppImage from GitHub
+  ansible.builtin.get_url:
+    url: "{{ item.url }}"
+    dest: "/home/benpoppy/Apps/{{ item.name }}/{{ item.name | title }}.AppImage"
+    mode: "u+x"
+
+- name: Create symlink to applications
+  become: true
+  ansible.builtin.file:
+    src: /home/benpoppy/Apps/{{ item.name }}/{{ item.name }}.desktop
+    dest: /usr/share/applications/{{ item.name }}.desktop
+    state: link

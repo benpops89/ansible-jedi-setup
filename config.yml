@@ -12,6 +12,13 @@ apt_installed_packages:
   - rpi-imager
   - dnsutils
 
+# AppImages to install
+app_images:
+  - name: obsidian
+    url: https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian-1.5.12.AppImage
+  - name: zen
+    url: https://github.com/zen-browser/desktop/releases/download/1.0.0-a.39/zen-specific.AppImage
+
 # Packages to install via homebrew
 homebrew_installed_packages:
   - gcc
