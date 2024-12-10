@@ -63,6 +63,8 @@ homebrew_cask_apps:
   - zoom
   - dbeaver-community
   - zen-browser
+  - spotify
+  - slack
 
 # Docker settings
 docker_users:
