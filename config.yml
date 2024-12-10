@@ -45,10 +45,12 @@ homebrew_installed_packages:
   - mongosh
   - zellij
   - terraform
+  - terragrunt
   - act
   - sops
   - age
   - k9s
+  - dotenv
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
