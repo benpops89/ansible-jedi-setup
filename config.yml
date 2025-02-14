@@ -69,6 +69,7 @@ homebrew_cask_apps:
   - zen-browser
   - spotify
   - slack
+  - hammerspoon
 
 # Docker settings
 docker_users:
