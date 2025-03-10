@@ -53,6 +53,7 @@ homebrew_installed_packages:
   - dotenv
   - lazygit
   - git-delta
+  - mdq
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
