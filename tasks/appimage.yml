@@ -2,12 +2,17 @@
 - name: Download AppImage from GitHub
   ansible.builtin.get_url:
     url: "{{ item.url }}"
-    dest: "/home/benpoppy/Apps/{{ item.name }}/{{ item.name | title }}.AppImage"
+    dest: "{{ ansible_env['HOME'] }}/Apps/{{ item.name }}/{{ item.name | title }}.AppImage"
     mode: "u+x"
+
+- name: Create desktop file for AppImage
+  ansible.builtin.template:
+    src: "templates/{{ item.name }}.desktop.j2"
+    dest: "{{ lookup('env', 'HOME') }}/Apps/{{ item.name }}/{{ item.name }}.desktop"
 
 - name: Create symlink to applications
   become: true
   ansible.builtin.file:
-    src: /home/benpoppy/Apps/{{ item.name }}/{{ item.name }}.desktop
-    dest: /usr/share/applications/{{ item.name }}.desktop
+    src: "{{ ansible_env['HOME'] }}/Apps/{{ item.name }}/{{ item.name }}.desktop"
+    dest: "/usr/share/applications/{{ item.name }}.desktop"
     state: link
