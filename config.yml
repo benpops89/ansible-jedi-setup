@@ -17,7 +17,7 @@ app_images:
   - name: obsidian
     url: https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/Obsidian-1.5.12.AppImage
   - name: zen
-    url: https://github.com/zen-browser/desktop/releases/download/1.10.3b/zen-x86_64.AppImage
+    url: https://github.com/zen-browser/desktop/releases/download/1.11.1b/zen-x86_64.AppImage
 
 # Packages to install via homebrew
 homebrew_installed_packages:
