@@ -1,0 +1,23 @@
+[Desktop Entry]
+Name=Ghostty
+Type=Application
+Comment=A terminal emulator
+Exec={{ lookup('env', 'HOME') }}/Apps/ghostty/Ghostty.AppImage %u
+Icon={{ lookup('env', 'HOME') }}/Apps/ghostty/ghostty.png
+Icon=com.mitchellh.ghostty
+StartupWMClass=com.mitchellh.ghostty
+Categories=System;TerminalEmulator;Utility;
+Keywords=terminal;tty;pty;
+StartupNotify=true
+Terminal=false
+Actions=new-window;
+X-GNOME-UsesNotifications=true
+X-TerminalArgExec=-e
+X-TerminalArgTitle=--title=
+X-TerminalArgAppId=--class=
+X-TerminalArgDir=--working-directory=
+X-TerminalArgHold=--wait-after-command
+
+[Desktop Action new-window]
+Name=New Window
+Exec={{ lookup('env', 'HOME') }}/Apps/ghostty/Ghostty.AppImage %u
