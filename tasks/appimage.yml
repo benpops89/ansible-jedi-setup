@@ -1,4 +1,9 @@
 ---
+- name: Create directory for AppImage
+  ansible.builtin.file:
+    path: "{{ ansible_env['HOME']}}/Apps/{{ item.name }}"
+    state: directory
+
 - name: Download AppImage from GitHub
   ansible.builtin.get_url:
     url: "{{ item.url }}"
