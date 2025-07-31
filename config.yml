@@ -75,6 +75,7 @@ homebrew_cask_apps:
   - slack
   - hammerspoon
   - hiddenbar
+  - ghostty
 
 # Docker settings
 docker_users:
