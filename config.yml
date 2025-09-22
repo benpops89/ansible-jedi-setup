@@ -43,6 +43,7 @@ homebrew_cask_apps:
   - slack
   - hammerspoon
   - hiddenbar
+  - brainfm
 
 # Docker settings
 docker_users:
@@ -60,3 +61,4 @@ git_config:
     value: true
   - name: core.editor
     value: nvim
+
