@@ -26,37 +26,9 @@ app_images:
 # Packages to install via homebrew
 homebrew_installed_packages:
   - gcc
-  - fzf
-  - zplug
-  - starship
-  - eza
-  - bat
-  - zoxide
-  - ripgrep
-  - fd
-  - tldr
-  - httpie
-  - jq
-  - gitui
-  - neovim
-  - go
-  - go-task
-  - direnv
-  - awscli
-  - libyaml
+  - stow
   - mise
-  - pipx
-  - mongosh
-  - zellij
-  - terraform
-  - terragrunt
-  - act
-  - sops
-  - age
-  - k9s
-  - lazygit
-  - git-delta
-  - mdq
+  - openssl@3
 
 # Mac Applications to install via homebrew casks
 homebrew_cask_appdir: /Applications
@@ -66,16 +38,11 @@ homebrew_cask_apps:
   - wezterm
   - todoist
   - docker
-  - arc
-  - google-cloud-sdk
-  - zoom
   - dbeaver-community
-  - zen-browser
   - spotify
   - slack
   - hammerspoon
   - hiddenbar
-  - ghostty
 
 # Docker settings
 docker_users:
@@ -93,9 +60,3 @@ git_config:
     value: true
   - name: core.editor
     value: nvim
-
-dots_config:
-  - name: status.showUntrackedFiles
-    value: "no"
-  - name: push.autoSetupRemote
-    value: true

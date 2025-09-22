@@ -5,24 +5,16 @@
 
 - name: Create folder where git repo for dotfiles will be tracked
   ansible.builtin.file:
-    path: "{{ home }}/.dotfiles"
+    path: "{{ home }}/dotfiles"
     state: directory
 
-- name: Clone the bare repo for dotfiles
+- name: Clone the repo for dotfiles
   ansible.builtin.git:
-    repo: git@github.com:benpops89/dotfiles.git
-    dest: "{{ home }}/.dotfiles"
-    bare: true
+    repo: git@github.com:benpops89/.dotfiles.git
+    dest: "{{ home }}/dotfiles"
 
-- name: Checkout the files
-  ansible.builtin.command:
-    cmd: "git --git-dir={{ home }}/.dotfiles --work-tree={{ home }} checkout"
-    creates: "{{ home }}/.zshrc"
-
-- name: Setup git config on dotfiles git repo
-  community.general.git_config:
-    name: "{{ item.name }}"
-    repo: "{{ home }}/.dotfiles"
-    scope: local
-    value: "{{ item.value }}"
-  loop: "{{ dots_config }}"
+- name: Setup the symlinks using stow
+  ansible.builtin.command: /opt/homebrew/bin/stow .
+  args:
+    chdir: "{{ ansible_env.HOME }}/dotfiles"
+  changed_when: true
