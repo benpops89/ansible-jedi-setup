@@ -11,7 +11,6 @@
 
   tasks:
     - import_tasks: tasks/apt-packages.yml
-    - import_tasks: tasks/homebrew.yml
     - name: Create folder to hold AppImages
       ansible.builtin.file:
         path: "{{ ansible_env['HOME']}}/Apps"
