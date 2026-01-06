@@ -12,9 +12,12 @@
   ansible.builtin.git:
     repo: git@github.com:benpops89/.dotfiles.git
     dest: "{{ home }}/dotfiles"
+    update: no
+  register: clone_dotfiles
 
 - name: Setup the symlinks using stow
   ansible.builtin.command: /opt/homebrew/bin/stow .
   args:
     chdir: "{{ ansible_env.HOME }}/dotfiles"
   changed_when: true
+  when: clone_dotfiles.changed
